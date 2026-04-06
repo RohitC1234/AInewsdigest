@@ -23,7 +23,7 @@ model = init_chat_model(
     api_key=GOOGLE_API_KEY
 )
 
-prompt = """
+prompt = f"""
 You're a news summarizer.
 Write a short paragraph analyzing those news.
 Add another second paragraph and tell me 
@@ -34,7 +34,8 @@ Summarize the following news articles:
 
 response = model.invoke(prompt)
 response_str = response.content
-print(response_str)
 
-#body = body.encode("utf-8")
-#send_email(message=body)
+body = "Subject: News Summary\n\n" + response_str + "\n\n"
+
+body = body.encode("utf-8")
+send_email(message=body)
