@@ -2,8 +2,8 @@ import requests
 from send_email import send_email
 from langchain.chat_models import init_chat_model
 
-api_key = "7ba478afda5c4e39ba0aa943c37b813c"
-GOOGLE_API_KEY = "AIzaSyDXhS0hCNr7ohiSNElro7WBzVXV6xacw0M"
+api_key = "News_api_key"
+GOOGLE_API_KEY = "generated_key"
 
 url = (
     "https://newsapi.org/v2//top-headlines?"
